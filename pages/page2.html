@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Natrelle</title>
+		<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+    <meta name="format-detection" content="telephone=no"/>
+		<link rel="stylesheet" href="../css/styles.css"/>
+		<script type="text/javascript" src="../js/zepto.js"></script>
+    <script type="text/javascript" src="../js/utils.js"></script>
+    <script type="text/javascript" src="../js/rotation.js"></script>
+    <base href="../" >
+	</head>
+	<body>
+		<article id="slide-2" class="page">
+			<h1>The most cohesive shaped gel.<span class="aug"><sup>7,</sup>*</span><span class="recon"><sup>6,</sup>*</span></h1>
+      <h2>Highly cohesive gel is formulated to preserve upper pole fill.</h2>
+
+      <section class="greyBar ">
+        <h3>The <i>Natrelle</i><sup>&reg;</sup> 410 highly cohesive gel is designed to help prevent upper pole deformities<sup>2</sup></h3>
+         <ul>
+           <li>
+            <span class="aug">Less than <b>1%</b> wrinkling/rippling through<br />7 years in primary augmentation<sup>1</sup></span>
+            <span class="recon"><b>3.1%</b> wrinkling/rippling in primary<br>reconstruction through 7 years<sup>1</sup></span>
+           </li>
+           <li class="right"><b>80%</b> less incidence of wrinkling/rippling<br />than <i>Mentor<sup>&reg;</sup> MemoryShape</i><sup>&trade;</sup> <span class="aug"><sup>8,&dagger;</sup></span><span class="recon"><sup>7,&dagger;</sup></span></li>
+           <!--<small>* Not a head-to-head comparison. Based on Jewell ML study.</small>-->
+         </ul>
+        <div class="methodology">
+				  <div id="pg2-meth-desc" class="description hidden">
+            <p class="asterik">In vitro study conducted to characterize cohesivity or<br>
+            resistance to deformation of gels in FDA-approved shaped<br>gel breast implants.
+            Six groups of cohesive gels (N = 20 for Allergan products, N = 7 for Mentor) were measured for material properties using the <i>BTC-2000</i><sup>&trade;</sup>, which applies a controlled vacuum, or negative pressure, to the test sample while measuring the resistance to deformation using a synchronized target laser. Each sample underwent the same test procedure; a window (1.0 cm diameter) was removed from the apex of the shell and the respective gel was tested.<br /></p>
+            <p class="dagger">A study to compare outcomes with <i>Natrelle</i><sup>&reg;</sup> 410 and <i>Mentor<sup>&reg;</sup> MemoryShape<sup>&trade;</sup></i>. Outcomes data included physical breast measurements, quality-of-life metrics, and patient/surgeon satisfaction assessment. Instances of visible/palpable wrinkling/rippling were discovered by the patient, surgeon, or clinical nursing staff during follow-up visits. Follow-up ranged between 20 to 77 months (<i>Natrelle</i><sup>&reg;</sup> 410) and 16 to 77 months (<i>Mentor<sup>&reg;</sup> MemoryShape<sup>&trade;</sup></i>). All subjects were treated uniformly.
+            </p>
+          </div>
+          <button id="pg2-meth-btn">*<sup>&dagger;</sup>Methodologies</button>
+        </div>
+      </section>
+
+      <section class="content">
+        <figure>
+          <h3><i>Natrelle</i><sup>&reg;</sup> 410 is the most highly cohesive gel implant.</h3>
+          <img src="images/pages/pg02/chart-mentor-natrelle.png">
+        </figure>
+        
+        <div class="sidebar">
+          <p>Allergan Highly Cohesive Style 410 (TruForm<sup>&trade;</sup> 3, N=20) demonstrated the greatest cohesivity or resistance to deformation when compared with Mentor Cohesive III (<i>Mentor<sup>&reg;</sup> MemoryShape<sup>&trade;</sup></i>, N=7 [Mentor Worldwide LLC; Santa Barbara, CA])</p>
+          <p>&mdash; Clinical significance has not been established</p>
+        </div>
+
+      </section>
+
+        <script>
+        
+          var rotatingBreastPg2; // global variable
+        
+        	window.slideUnloaded2 = function() {
+        	  var methBtn = $("#pg2-meth-btn"),
+                methDesc = $("#pg2-meth-desc");
+                
+                
+            methDesc.addClass("hidden");
+            
+        	};
+        
+          // execute callback when the page is ready:
+          window.slideLoaded2 = function() {
+          
+            var methBtn = $("#pg2-meth-btn"),
+                methDesc = $("#pg2-meth-desc");
+              
+            // methdology button
+            methBtn.on(natrelle.utils.isTouch() ? "tap" : "click", function(e) {
+              methDesc.toggleClass("hidden"); // change button image
+            });
+
+          };
+
+    </script>
+		</article>
+	</body>
+</html>

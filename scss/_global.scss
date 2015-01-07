@@ -1,0 +1,107 @@
+$frameworkWidth: 1024px;
+$frameworkHeight: 768px;
+$frameworkHeaderHeight: 50px;
+
+$isiButtonHeight: 100px;
+$isiHeight: $frameworkHeight;
+$isiStartingPosition: $frameworkHeight - $isiButtonHeight;
+$isiEndingPosition: 0px;
+
+$refButtonHeight: 41px;
+$refHeight: $frameworkHeight;
+$refStartingPosition: $frameworkHeight;
+$refEndingPosition: 0px;
+
+// slide out menu
+$pageSelectionWidth:328px;
+$pageSelectionHeight:580px;
+
+$pageWidth:1024px;
+$pageHeight:$frameworkHeight - $isiButtonHeight;
+
+$primaryColor: #00b5cb;
+$secondaryColor: #003768;
+
+$hevBold: "Helvetica Neue Bold";
+$hevBoldIt: "Helvetica Neue Bold It";
+$hevBlack: "Helvetica Neue Black";
+$hevItalic: "Helvetica Neue Italic";
+$hevLight: "Helvetica Neue Light";
+$hevLightItalic: "Helvetica Neue Light Italic";
+$hevThin: "Helvetica Neue Thin";
+$hevRoman:  "Helvetica Neue Roman";
+$hevMed:  "Helvetica Neue Med";
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+h1,h2,h3,h4,h5,h6,b,strong {
+  font-weight:normal;
+}
+i,em {
+  font-style: normal;
+}
+
+.nowrap {
+  white-space:nowrap;
+}
+
+body {
+  font: {
+    size: 16px;
+    family: "Helvetica Neue Roman";
+  }
+  sup{
+    line-height: 0;
+  }
+  color:#003768;
+}
+
+span.underline {
+  text-decoration: none;
+  position: relative;
+  &:before {
+    content: '';
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 2px;
+    border-bottom:2px solid;
+  }
+}
+
+.hidden {
+  position: absolute !important;
+  left: -9999px !important;
+}
+
+.invisible {
+  visibility: hidden;
+  //display:none;
+}
+
+ul {
+	font: {
+	  family: "Helvetica Neue Light";
+	}
+
+	li {
+    b,strong{
+      font: {
+        family: "Helvetica Neue Bold";
+      }
+
+    }
+		list-style: none;
+		padding-left: 15px;
+		background-image: url('../images/framework/bullet_point.png');
+		background-repeat: no-repeat;
+		background-position: 0 .35em;
+	}
+}

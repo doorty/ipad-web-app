@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Natrelle</title>
+		<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <script type="text/javascript" src="../js/zepto.js"></script>
+    <script type="text/javascript" src="../js/utils.js"></script>
+    <script type="text/javascript" src="../js/rotation.js"></script>
+    <script type="text/javascript" src="../js/slider.js"></script>
+		<link rel="stylesheet" href="../css/styles.css"/>
+    <base href="../" >
+	</head>
+	<body>
+		<article id="slide-7" class="page">
+			<h1>What <i>Natrelle</i><sup>&reg;</sup> 410 options are available<br>to meet my patients' needs?</h1>
+      <section class="content-block left-side">
+        <h4><i>Natrelle</i><sup>&reg;</sup> 410 - MATRIX </h4>
+        <img src="images/pages/pg09/matrix.png" class="chart" />
+      </section>
+	      <section class="content-block right-side">
+
+		      <h3>Our palette of <i>Natrelle</i><sup>&reg;</sup> 410 implant options gives you the ability to match the right implant for augmentation to<br/> the right individual.</h3>
+          <img src="images/pages/pg07/dvd-image-2.jpg"/>
+          <p>Use the <b><i>Natrelle</i><sup>&reg;</sup> 410 Implant Selector Tool</b> to help select the right implant for your primary augmentation patients. </p>
+    				<div id="pg8-blueBox" class="blueBox">
+    					<span>Get certified: <u>allerganacademy.com</u></span>
+    				</div>
+      </section>
+      <script>
+			
+			window.slideUnloaded7 = function() {
+  			// doesn't need it
+  			// you have to close popup to leave page
+			};
+			
+			window.slideLoaded7 = function() {
+			  var $slide = $("#framework-container"),
+			      $popup = $("#iframe-popup"),
+			      $button = $("#pg8-blueBox"),
+			      opening = false, // needed to prevent crashes due to opening/closing quickly
+			      $iframe = $('<div><div><iframe src="http://allerganacademy.com/Register.aspx?Generic=1">browser not supported</iframe></div></div>');
+    			
+  		  $button.on(natrelle.utils.isTouch() ? "touchstart" : "click", showPopup);
+
+  		  function showPopup() {
+  		    $popup.append($iframe);
+  		    $popup.removeClass("hidden");
+  		    $slide.addClass("popup");  		    
+  		    
+  		    setTimeout(function() {
+            $slide.one(natrelle.utils.isTouch() ? "touchstart" : "click", hidePopup);    		    
+  		    }, 100);
+  		    
+  		    opening = true;
+  		    setTimeout(function() {
+  		      opening = false;
+  		    }, 1000);
+  		  }
+  		  
+  		  function hidePopup() {
+  		    $popup.addClass("hidden");
+  		    $slide.removeClass("popup");
+  		    if (opening) {
+    		    setTimeout(function() {
+    		      $popup.html("");
+    		    }, 500);
+  		    }
+  		    else {
+    		    $popup.html("");
+  		    }
+  		  }
+  		  
+			};
+		</script>
+		</article>
+	</body>
+</html>

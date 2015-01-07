@@ -1,0 +1,1 @@
+This is an example web app that I created at my last company for an iPad. This would run inside a native shell. You can view some of the functionality inside a safari browser on the desktop, but full functionality requires running on an iPad to take advantage of touch events.

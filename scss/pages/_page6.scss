@@ -1,0 +1,85 @@
+&#slide-6 {
+  position: relative;
+  // remove any weird effects
+  // this only works on non-interactive/animated pages
+  -webkit-transform: translate3d(0,0,0);
+  
+  h3 {
+    text-align: center;
+    margin-top: 70px;
+    font-size: 24px;
+  }
+  h4 {
+    text-align: center;
+    color: #FFF;
+    font-size: 24px;
+    background-color: $primaryColor;
+    height: 59px;
+    width: 403px;
+    border-radius: 20px 0 20px 0;
+    padding-top: 20px;
+    margin-bottom: 20px;
+    i {
+      font-family: $hevItalic;
+    }
+  }
+  ul{
+    line-height: 22px;
+    margin-left: 0px;
+    text-align: left;
+    li{
+      font-size: 18px;
+      padding-bottom: 10px;
+      background-position: 0 0.33em;
+      &.right{
+        margin-left: 20px;
+      }
+      i{
+        font-style: italic;
+      }
+    }
+    small{
+      font-size: 12px;
+      margin-left: 14px;
+    }
+  }
+
+  p {
+    font-size: 18px;
+  }
+  .cross {
+    // placeMe     (top,left,width )
+    @include placeMe(271px, 476px, 100px);
+  }
+
+  .content-block {
+    text-align: center;
+    &.left-side {
+      // placeMe     (top,left,width )
+      @include placeMe(180px, 80px, 354px);
+      img {
+        margin-left: -9px;
+        margin-bottom: 38px;
+        margin-top: 31PX;
+      }
+    }
+    &.right-side {
+      // placeMe     (top,left,width )
+      @include placeMe(180px, 540px, 405px);
+      img {
+        margin-left: 14px;
+        margin-top: 28px;
+        margin-bottom: 38px;
+      }
+      small {
+        display: block;
+        font-family: "Helvetica Neue Thin";
+      }
+      h4{
+        background-color: $secondaryColor;
+      }
+
+    }
+  }
+
+}

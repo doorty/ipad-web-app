@@ -1,0 +1,59 @@
+@-webkit-keyframes isiShow {
+	0% {
+		top: $isiStartingPosition;
+	}
+	60% {
+		top: $isiEndingPosition - 30px;
+	}
+	80% {
+		top: $isiEndingPosition + 10px;
+	}
+	100% {
+		top: $isiEndingPosition;
+	}
+}
+
+@-webkit-keyframes isiHide {
+	0% {
+		top: $isiEndingPosition - 30px;
+	}
+	60% {
+		top: $isiStartingPosition + 30px;
+	}
+	80% {
+		top: $isiStartingPosition - 10px;
+	}
+	100% {
+		top: $isiStartingPosition;
+	}
+}
+
+@-webkit-keyframes refShow {
+	0% {
+		top: $refStartingPosition;
+	}
+	60% {
+		top: $refEndingPosition - 30px;
+	}
+	80% {
+		top: $refEndingPosition + 10px;
+	}
+	100% {
+		top: $refEndingPosition;
+	}
+}
+
+@-webkit-keyframes refHide {
+	0% {
+		top: $refEndingPosition - 30px;
+	}
+	60% {
+		top: $refStartingPosition + 30px;
+	}
+	80% {
+		top: $refStartingPosition - 10px;
+	}
+	100% {
+		top: $refStartingPosition;
+	}
+}

@@ -1,0 +1,29 @@
+@import "normalize";
+@import "global";
+@import "fonts";
+@import "framework";
+@import "iframepopup";
+@import "modal";
+@import "isi";
+@import "references";
+@import "animations";
+@import "mixins";
+
+article.page {
+	@import "pages/global";
+	@import "pages/cover";
+	@import "pages/page1";
+	@import "pages/page2";
+	@import "pages/page3";
+	@import "pages/page4";
+	@import "pages/page5";
+	@import "pages/page6";
+	@import "pages/page7";
+	@import "pages/page8";
+	@import "pages/page9";
+	@import "pages/page10";
+	@import "pages/page11";
+	@import "pages/page12";
+	@import "pages/page13";
+	//@import "pages/page14";
+}

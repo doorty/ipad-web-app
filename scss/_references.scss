@@ -1,0 +1,90 @@
+#ref-container {
+  overflow: hidden;
+	top:$refStartingPosition;
+	height:$refHeight;
+	z-index:101;
+	.aug {
+  	ol.references li {
+    	padding-top: 8px; // reduced to accomodate more references
+  	}
+	}
+	
+	i {
+  	font-style: italic;
+	}
+  ul{
+    font-size: 17px;
+  }
+	&.hide {
+		-webkit-animation: refHide .5s 0 forwards;
+	}
+	&.show {
+		-webkit-animation: refShow .5s 0 forwards;
+	}
+	.blue-block {
+    color: #fff;
+    text-align: center;
+    height:$refButtonHeight;
+    line-height: $refButtonHeight + 5px;
+    font: {
+      family: "Helvetica Neue Roman";
+      weight: normal;
+      size: 16px;
+    }
+    background-color: #00325b;
+  }
+  h4 {
+	  text-align: center;
+	  color:$primaryColor;
+	  font-size:34px;
+	  padding:44px 15px 3px 15px;
+	  margin:0;
+    font-family: "Helvetica Neue Bold"
+  }
+  .recon h4 {
+    padding-top:25px;
+  }
+
+  .footer {
+    position: absolute;
+    top:662px;
+    width:100%;
+    height:107px;
+    background-color: #00325b;
+    
+    .copyright {
+      color: #fff;
+      position: absolute;
+      top: 24px;
+      left: 287px;
+      width: 450px;
+      font: {
+        family:$hevLight;
+        size:13px;
+      }
+      a, a:hover, a:active {
+        text-decoration: none;
+        color:#00b5cb;
+      }
+      i {
+        font-style: normal;
+        font-family: $hevLightItalic;
+      }
+    }
+    .allergan-logo {
+      position: absolute;
+      top:39px;
+      left:50px;
+      width:187px;
+      height:27px;
+    }
+    .natrelle-logo {
+      position: absolute;
+      top: 25px;
+      left: 780px;
+      width:201px;
+      height:51px;
+    }
+  }
+
+}

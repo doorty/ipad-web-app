@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Natrelle</title>
+		<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+    <meta name="format-detection" content="telephone=no"/>
+		<link rel="stylesheet" href="../css/styles.css"/>
+		<script type="text/javascript" src="../js/zepto.js"></script>
+		<script type="text/javascript" src="../js/utils.js"></script>
+    <base href="../" >
+	</head>
+	<body>
+		<article id="slide-5" class="page">
+			<h1>The most selected shaped implant globally.<sup>9,10</sup></h1>
+			<h2>Selected by more surgeons. Preferred by patients.<sup>9,10</sup></h2>
+      <section class="content-block left-side">
+        <h3>The <i>Natrelle</i><sup>&reg;</sup> 410 is selected<br>by more surgeons<sup>9,10</sup> </h3>
+
+        <ul>
+          <li><b>#1 selected shaped implant</b> — by surgeons in Europe and Canada vs <i>Mentor<sup>&reg;</sup> MemoryShape</i><sup>&trade;</sup> and other shaped
+            gel devices<sup>9,10</sup>
+          </li>
+          <li><b>Proven results</b> — the <i>Natrelle</i><sup>&reg;</sup> 410 Shaped Gel Breast Implant has over 20 years of favorable results in
+            Europe<sup>2,11</sup>
+          </li>
+          <li><b>More peer-reviewed data</b> — the <i>Natrelle</i><sup>&reg;</sup> 410 has more reported data and peer-reviewed publications than
+            any other shaped implant
+          </li>
+        </ul>
+        <div class="blue-bar">
+          <img src="images/pages/pg06/breast_images.png" />
+          <h1>Actual <i>Natrelle</i><sup>&reg;</sup> 410<br />
+            patient at preoperation,<br />
+            1, 3, and 7 years</h1>
+        </div>
+      </section>
+
+      <section class="content-block right-side">
+        <h3>And preferred by patients<sup>12</sup></h3>
+        <ul>
+          <li><b>High satisfaction</b> — 96.5% satisfaction at 7 years in primary augmentation patients<sup>1</sup></li>
+          <li><b>Selected 2 to 1 for "most natural feel":</b> When asked which breast implant ex vivo felt "most natural," twice as many women selected <i>Natrelle</i><sup>&reg;</sup> 410 vs other leading shaped implants<sup>12,</sup>*
+        </ul>
+
+        <img src="images/pages/pg06/2to1_graphic.png" />
+        <div class="methodology">
+				  <div id="pg5-meth-desc" class="description hidden">
+            <p>Survey and in-person interviews conducted with 52 prospective mastopexy augmentation patients in May 2012. Subjects were asked which shaped breast implant ex vivo felt "most natural."</p>
+          </div>
+          <button id="pg5-meth-btn">*Methodology</button>
+        </div>
+      </section>
+      <script>
+			window.slideUnloaded5 = function() {
+			 var methDesc = $("#pg5-meth-desc");
+            
+       methDesc.addClass("hidden");
+			};
+			
+			window.slideLoaded5 = function() {
+			  var methBtn = $("#pg5-meth-btn"),
+            methDesc = $("#pg5-meth-desc");
+            
+          // methdology button
+          methBtn.on(natrelle.utils.isTouch() ? "tap" : "click", function(e) {
+            methDesc.toggleClass("hidden"); // change button image
+          });
+			};
+		</script>
+		</article>
+	</body>
+</html>

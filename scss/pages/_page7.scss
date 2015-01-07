@@ -1,0 +1,100 @@
+&#slide-7 {
+  position: relative;
+  // remove any weird effects
+  // this only works on non-interactive/animated pages
+  -webkit-transform: translate3d(0,0,0);
+  i{
+    font-style: italic;
+  }
+  h3 {
+    text-align: center;
+    margin-bottom: 0px;
+    margin-top: 75px;
+    font-size: 24px;
+  }
+  h4 {
+    text-align: center;
+    color: #FFF;
+    font-size: 24px;
+    font-family: $hevBold;
+    background-color: $primaryColor;
+    height: 59px;
+    width: 403px;
+    border-radius: 20px 0 20px 0;
+    padding-top: 20px;
+    margin-bottom: 20px;
+
+  }
+  .chart{
+    margin-left: 110px;
+    margin-top: 25px;
+    width: 394px;
+  }
+
+  .content-block {
+
+      &.left-side {
+        // placeMe     (top,left,width )
+        @include placeMe(135px, 90px, 354px);
+        img {
+          margin-left: -9px;
+          margin-bottom: 38px;
+          margin-top: 31PX;
+
+        }
+      }
+
+    &.right-side {
+      // placeMe     (top,left,width )
+      @include placeMe(136px, 528px, 369px);
+      a, a:hover, a:active {
+        text-decoration: none;
+      }
+      h3{
+        text-align: left;
+        margin-bottom: 10px;
+        font-size: 19px;
+        margin-top: 0px;
+        i {
+          font-style: normal;
+          font-family: $hevBoldIt;
+        }
+      }
+      p{
+        width: 415px;
+        padding-top: 10px;
+      }
+      b{
+        font-family: "Helvetica Neue Bold";
+      }
+      .blueBox{
+        font-family: "Helvetica Neue Thin";
+        -webkit-border-radius: 8px 0px;
+        background: $secondaryColor;;
+        border-radius: 20px 0px;
+        width: 395px;
+        height: 45px;
+        padding-top: 15px;
+        padding-bottom: 10px;
+        padding-left: 40px;
+        font-size: 18px;
+        margin-top: 15px;
+        color: white;
+        display:block;
+        span{
+          font-family: "Helvetica Neue Bold";
+          a{
+
+          }
+        }
+      }
+      img {
+        width: 308px;
+        margin-left: 30px;
+      }
+
+    }
+
+  }
+
+}

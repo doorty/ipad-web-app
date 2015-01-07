@@ -1,0 +1,44 @@
+&#cover {
+	background:url('../images/pages/cover/cover_bkg.png') left -68px no-repeat;
+
+	.content {
+		position:absolute;
+		left: 462px;
+		top: 160px;
+		min-width:500px;
+
+		h1 {
+			text-indent: -9999px;
+			width:455px;
+			height:125px;
+			background:url('../images/pages/cover/title.png') center center no-repeat;
+			margin-left:17px;
+		}
+    p{
+      color: $primaryColor;
+      margin-left: 40px;
+      margin-top: -5px;
+      font-size: 14px;
+    }
+		.buttons {
+			
+			button {
+				height:105px;
+				color:#fff;
+				text-shadow: 0 0 1px #000;
+				font: {
+					family:"Helvetica Neue Light";
+					size:22px;
+				}
+				&#aug-button {
+					width:240px;
+					background:url('../images/pages/cover/aug_btn.png') right top no-repeat;
+				}
+				&#recon-button {
+					width:250px;
+					background:url('../images/pages/cover/recon_btn.png') left top no-repeat;
+				}
+			}
+		}
+	}
+}

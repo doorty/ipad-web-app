@@ -1,0 +1,54 @@
+@mixin btnBase($top,$left,$width,$height,$btnPng){
+  position: absolute;
+  background: url($btnPng) no-repeat;
+  cursor: pointer;
+  top:$top;
+  left:$left;
+  WIDTH: $width;
+  height:$height;
+  z-index: 12;
+}
+
+@mixin placeMe($top,$left,$width){
+  position: absolute;
+  top:$top;
+  left:$left;
+  width: $width;
+}
+
+@mixin greyBar(){
+//background: -webkit-gradient(linear, left top, right top, color-stop(0%,#f9f9f9), color-stop(25%,#ebebeb), color-stop(75%,#ebebeb), color-stop(100%,#f9f9f9));
+  background:-webkit-linear-gradient(left, #f9f9f9 0%,#ebebeb 30%,#ebebeb 70%,#f9f9f9 100%);
+  width: 100%;
+}
+
+@mixin natrelleLogo(){
+  font: {
+    family: "Helvetica Neue Bold";
+  }
+  i{
+    font: {
+      family: "Helvetica Neue Bold It";
+    }
+  }
+  color: #00b5cb;
+//font-size: $size+'px';
+}
+@mixin fadeIn($dur:0.25, $delay:0){
+  opacity: 1;
+  -webkit-transition: opacity $dur+s ease-in $delay+s;
+}
+@mixin fadeOut($dur:0.25, $delay:0){
+  opacity: 0;
+  -webkit-transition: opacity $dur+s ease-in $delay+s;
+}
+
+@mixin popUp{
+  border: $primaryColor 6px solid;
+  -webkit-box-shadow: inset 0px 2px 2px 0px rgba(0, 0, 0, .5);
+  box-shadow: inset 0px 2px 2px 0px rgba(0, 0, 0, .5);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.11)), color-stop(100%,rgba(252,249,249,0.11)));
+  background-color: white;
+  position: absolute;
+  overflow:hidden;
+}

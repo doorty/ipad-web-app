@@ -1,0 +1,83 @@
+&#slide-3 {
+  position: relative;
+  
+  p.in-vivo {
+    text-align: center;
+    color:rgba(0,50,91,.75);
+    font-size: 16px;
+  }
+  
+  #pg3-meth {
+    left:750px;
+    button {
+      z-index: 9;
+    }
+    .description {
+      z-index: 8;
+      padding-top:10px;
+      left: -256px;
+      width: 400px;
+    }
+  }
+
+  .rotating-breast-container {
+    margin-left: 8px;
+    margin-top: 40px;
+    width: 1010px;
+    height: 480px;
+    background: url("../images/pages/pg03/rotation_graphic_03.png") center 296px no-repeat;
+    text-align:center;
+    position:relative;
+    #rotating-touch-area {
+      position: absolute;
+      top: 276px;
+      left: 32px;
+      width:950px;
+      height:200px;
+    }
+    
+    #natrelle410 {
+      position: absolute;
+      left: 2px;
+      top: 27px;
+    }
+
+    span {
+      display: block;
+      position: absolute;
+      top:-10px;
+      width: 250px;
+      text-align:center;
+      font: {
+        family: $hevBold;
+        size: 18px;
+      }
+      sup{
+         top:-.05em;
+      }
+      i{
+        font-style: italic;
+      }
+      &.natrelle {
+        color: #00b5cb;
+        left:49px;
+      }
+      &.mentor {
+        left:364px;
+      }
+      &.sientra {
+        left:686px;
+      }
+      &.discription, {
+        margin-top: 6px;
+        font: {
+          family: "Helvetica Neue Light";
+          size:16px;
+        }
+        top: 10px;
+
+      }
+    }
+  }
+  
+}

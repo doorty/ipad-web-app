@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Natrelle</title>
+		<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <link rel="stylesheet" href="../css/styles.css"/>
+    <script type="text/javascript" src="../js/zepto.js"></script>
+    <script type="text/javascript" src="../js/utils.js"></script>
+    <script type="text/javascript" src="../js/rotation.js"></script>
+    <base href="../" >
+
+	</head>
+	<body>
+		<article id="slide-9" class="page">
+      <h1>A precise match-up for a precise fit.</h1>
+      <h2>The most consistently precise implant-tissue expander system.</h2>
+      <h3>The <i>Natrelle</i><sup>&reg;</sup> 410 is the only shaped implant with a consistently precise fit with its tissue expander &mdash; the <i>Natrelle</i><sup>&reg;</sup> 133.*</h3>
+      <section id="pg10-content-area" class="content-block ">
+        
+        <img id="pg10-pinch-animation" src="images/image-sequences/pinch/Pinch_Combine_0001.png" />
+        
+        <div id="pg-10-subheading-1" class="subheading part-1">
+          <h3><i>Natrelle</i><sup>&reg;</sup> 410 <span>Style MF 410420</span></h3>
+          <h4>Base Width: 13.5 cm<br>Height: 12.5 cm</h4>
+        </div>
+        <div id="pg-10-subheading-2" class="subheading part-1">
+          <h3><i>Natrelle</i><sup>&reg;</sup> <span>133MV-13-T</span></h3>
+          <h4>Base Width: 13.0 cm<br>Height: 12.0 cm</h4>
+        </div>
+        
+        <button id="pg10-zoom-btn" class="part-2"></button>
+        <div id="pg10-zoom-popup" class="part-2">
+          <img src="images/pages/pg11/zoom-popup.png" class="part-2" />
+        </div>
+        <div id="pg10-toggle-text" class="part-2">
+          <button id="toggle-text-btn"></button>
+          <span class="one">The <i>Natrelle</i><sup>&reg;</sup> 410 Two-Stage Reconstruction System</span>
+          <span class="two"><i>Natrelle</i><sup>&reg;</sup> 410 resterilizable sizers are available so you<br>can confirm the final implant size.</span>
+        </div>
+      </section>
+      <button id="pg10-tissue-expander-btn" class="tissue-expander" onclick="natrelle.framework.showTissueExpanderIsi();">Tap here for Important <i>Natrelle</i><sup>&reg;</sup> Tissue Expander Safety Information</button>
+      <p class="footnote asterik">For implant base widths<br>11.0 cm to 15.5 cm.</p>
+      <script>
+      
+      var pinchAnimRotaterPg9; // global
+      
+      window.slideUnloaded9 = function() {
+        var contentArea = $("#pg10-content-area"),
+            toggleTextArea = $("#pg10-toggle-text"),
+            toggleTextBtn = $("#toggle-text-btn"),
+            zoomPopup = $("#pg10-zoom-popup"),
+            zoomPopupBtn = $("#pg10-zoom-btn"),
+            pinchAnimImg = $("#pg10-pinch-animation"),
+            isAnimating = false;
+            
+        if(contentArea.hasClass("toggle")) {
+          contentArea.removeClass("toggle");
+          pinchAnimRotaterPg9.resetRotation();
+        }
+        
+        toggleTextArea.removeClass("toggle");
+        zoomPopup.removeClass("toggle").off();
+        
+      };
+      
+      window.slideLoaded9 = function() {
+        var contentArea = $("#pg10-content-area"),
+            toggleTextArea = $("#pg10-toggle-text"),
+            toggleTextBtn = $("#toggle-text-btn"),
+            zoomPopup = $("#pg10-zoom-popup"),
+            zoomPopupBtn = $("#pg10-zoom-btn"),
+            pinchAnimImg = $("#pg10-pinch-animation"),
+            isiBtn = $("#pg10-tissue-expander-btn"),
+            isAnimating = false;
+        
+        zoomPopupBtn.on(natrelle.utils.isTouch() ? "tap" : "click", function(e) {
+          zoomPopup.toggleClass("toggle");
+          zoomPopup.one(natrelle.utils.isTouch() ? "tap" : "click", function(e) {
+            zoomPopup.toggleClass("toggle");
+          });
+        });
+        
+        toggleTextBtn.on(natrelle.utils.isTouch() ? "tap" : "click", function(e) {
+          toggleTextArea.toggleClass("toggle");
+        });
+        
+        pinchAnimRotaterPg9 = new eveo.rotater({
+          target: ["pg10-pinch-animation"],
+          touchArea: null,
+          numberOfFrames: 50,
+          filePath: ["images/image-sequences/pinch/"],
+          fileName: ["Pinch_Combine_00"],
+          fileExt: ["png"],
+          cacheSize: 10,
+          startingFrame: 1,
+          infiniteRotation: false,
+          onRotate: null
+        });
+
+        pinchAnimImg.on("touchstart", function(e) {
+          GlobalDoNotMovePage = true;
+    	  });
+    	   
+        pinchAnimImg.on("touchend", function(e) {
+          GlobalDoNotMovePage = false;
+        });
+        
+        pinchAnimImg.on(natrelle.utils.isTouch() ? 'gestureend' : 'click', function(e) {
+          if (isAnimating) { return; }
+          if (e.scale < 1.0) {
+              // User moved fingers closer together
+              if(!contentArea.hasClass("toggle")) {
+              	contentArea.toggleClass("toggle");
+              	isAnimating = true
+                pinchAnimRotaterPg9.rotateToFrame(50, function() {
+                  // finished animating
+                  isAnimating = false;
+                });
+              }
+          } else if (e.scale > 1.0) {
+              // User moved fingers further apart
+              if(contentArea.hasClass("toggle")) {
+                contentArea.toggleClass("toggle");
+                isAnimating = true
+                pinchAnimRotaterPg9.rotateToFrame(1, function() {
+                  // finished animating
+                  isAnimating = false;
+                });
+              }
+          }
+        });
+
+      };
+    </script>
+		</article>
+	</body>
+</html>

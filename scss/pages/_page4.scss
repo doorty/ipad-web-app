@@ -1,0 +1,325 @@
+&#slide-4 {
+  position: relative;
+  .glow {
+    text-shadow: -1px 1px 20px #fff, 1px -1px 20px #fff, -1px 1px 20px #fff, 1px -1px 20px #fff, -1px 1px 20px #fff, 1px -1px 20px #fff;
+  }
+  h3{
+    text-align: center;
+    
+    &.top {
+      margin-top: 35px;
+      padding-top:30px;
+      font-size: 29px;
+      color:#fff;
+    }
+    &.bottom {
+      font-size: 25px;
+      color:$primaryColor;
+    }
+  }
+  section.rotating-breast-container {
+    //outline: red solid 1px;
+    text-align: center;
+    margin: -10px 0 0 60px;
+    width: 900px;
+    height:400px;
+    background:-webkit-linear-gradient(#0db2ce 0%, rgba(255,255,255,0) 100%);
+    -webkit-border-radius: 20px 0 0 0;
+    
+    .animation {
+      position:absolute;
+      top:230px;
+      left:11px;
+    }
+    
+    img#outside-curves {
+    	opacity: 0;
+    }
+    img#inside-curves {
+      opacity:0;
+    }
+
+
+    //shrunk when it splits into 2
+    &.shrunk {
+      figure{
+        button.compare{
+          @include fadeOut(0);
+          display: none;
+        }
+        label{
+          @include fadeOut(0);
+
+        }
+        h3.big{
+          @include fadeOut(0);
+        }
+        .shrunk-text{
+          @include fadeIn(.75, 0);
+          //display: block;
+          h2{
+            @include fadeIn(.75, .25);
+            span{
+             i{
+              font-style: italic;
+              }
+            }
+          }
+          .back-btn{
+            @include fadeIn(.75, .25);
+            display: initial;
+          }
+        }
+      }
+      #zipper1-pg05, #zipper2-pg05 {
+        @include fadeOut(0);
+      }
+
+      .natrelle_implant {
+        width: 437px;
+        top: 30px;
+        left: 40px;
+
+      }
+      .mentor_implant {
+        top:39px;
+        left: 478px;
+        
+        @include fadeIn(.75, 0);
+        -webkit-transition: all 0.5s ease-in 0s;
+
+      }
+      img#outside-curves {
+      	position:absolute;
+      	top:23px;
+      	left:381px;
+        @include fadeIn(.5,1);
+      }
+      img#inside-curves {
+      	position:absolute;
+      	top:77px;
+      	left:359px;
+        @include fadeOut(0,0);
+      }
+      &.switch {
+      	img#outside-curves {
+	        @include fadeOut(0,0);
+	      }
+	      img#inside-curves {
+	        @include fadeIn(.5,1);
+	      }
+        .natrelle_implant {
+          left: 450px;
+        }
+        .mentor_implant {
+          left: 53px;
+        }
+        figure .shrunk-text{
+          //background: url('../images/pages/pg05/inside_curves.png')no-repeat;
+          //background-position:379px 79px;
+          h2 {
+            &:nth-of-type(1){
+              left:655px;
+            }
+            &:nth-of-type(2){
+              left: 160px;
+            }
+          }
+        }
+      }
+
+    }
+    //main css
+    h3.big {
+      position: absolute;
+      top: 300px;
+      left: 400px;
+      width: 200px;
+      text-align: center;
+      font-size: 19px;
+      @include fadeIn(.75,.25);
+      span {
+        font: {
+          size:16px;
+          family:$hevLight;
+        }
+      }
+    }
+    figure {
+      button.compare {
+        color: $primaryColor;
+        font: {
+          family: $hevBold;
+          size: 18px;
+        }
+        //               (top,left,width,height,button url )
+        @include btnBase(116px, 743px, 196px, 50px, '../images/framework/compare_btn.png');
+        z-index: 24;
+        display: none;
+        @include fadeOut();
+        &.on{
+          @include fadeIn(.75);
+          display: initial;
+        }
+        &.delayed{
+          @include fadeIn(.75,.25);
+        }
+      }
+      label {
+        position: absolute;
+        z-index: 10;
+        font: {
+          family:  $hevBold;
+        }
+        @include fadeOut();
+        &:nth-of-type(1) {
+          top: 41px;
+          left: 211px;
+        }
+        &:nth-of-type(2) {
+          top: -44px;
+          left: 662px;
+          width: 168px;
+          text-align: left;
+        }
+        &.on{
+          @include fadeIn();
+          //display: initial;
+        }
+        &.delayed{
+          @include fadeIn(.75,.25);
+        }
+
+      }
+      #zipper1-pg05, #zipper2-pg05 {
+
+        @include fadeIn(.75,.25);
+        z-index: 29;
+        position: absolute;
+        background: none;
+        border: 0;
+        outline: 0;
+        cursor: pointer;
+        .sliderTrackLeft, .sliderTrack, .sliderTrackRight {
+          float:left;
+        }
+        .sliderTrack, .sliderTicks {
+          height: 170px;
+        }
+        .sliderThumb {
+          position: absolute;
+          z-index: 30;
+          width: 48px;
+          height: 50px;
+          cursor: pointer;
+          background: url("../images/framework/arrow_up_btn.png") no-repeat;
+          -webkit-transform: translate3d(0,0,0); // prevent weird artifacts
+        }
+      
+        &.on{
+          .sliderThumb {
+            background: url("../images/framework/arrow_down_btn.png") no-repeat;
+          }
+        }
+      }
+      
+      #zipper1-pg05 {
+        top: 96px;
+        left: 274px;
+        height: 173px;
+      }
+      
+      #zipper2-pg05 {
+        top: -17px;
+        left: 603px;
+        height: 289px;
+      }
+
+      .natrelle_implant {
+        position: absolute;
+        width: 621px;
+        top: 0px;
+        left: 160px;
+        -webkit-transition: all 0.5s ease-in 0s;
+      }
+      .shrunk-text{
+        @include fadeOut(0);
+        //display: none;
+        position: absolute;
+        top:10px;
+        width: 900px;
+        height: 200px;
+        z-index: 22;
+        //background: url('../images/pages/pg05/outside_curves.png')no-repeat;
+        //background-position:374px 23px;
+        
+        h2{
+          @include fadeOut(0);
+          position: relative;
+          width:180px;
+          font-family: $hevLight;
+          &:nth-of-type(1){
+            top: 231px;
+            left: 160px;
+            width: 170px;
+            color:$primaryColor;
+            span {
+              font-family: $hevBold;
+            }
+          }
+          &:nth-of-type(2){
+            top:193px;
+            left:655px;
+            i {
+              font-style: italic;
+            }
+          }
+        }
+        .controls {
+          position:absolute;
+          top: -64px;
+          left: 331px;
+          height: 62px;
+          width: 297px;
+          background-color:#c6edf4;
+          -webkit-border-radius: 35px 0 35px 0;
+          button.back-btn{
+            // (top,left,width,height,button url )
+            @include btnBase(10px, 30px, 110px, 50px, '../images/framework/back_btn.png');
+            background-position: top right;
+            h3 {
+              text-align: left;
+            }
+          }
+          button.flip-btn{
+            // (top,left,width,height,button url )
+            @include btnBase(10px, 168px, 96px, 50px, '../images/framework/flip_btn.png');
+            h3 {
+              text-align: right;
+            }
+          }
+          h3{
+            font-size: 20px;
+          }
+        }
+      }
+
+    }
+
+    .mentor_implant {
+      width: 437px;
+      position: absolute;
+      top:39px;
+      left: 471px;
+      background: url("../images/pages/pg05/other_implant.png") no-repeat top center;
+      width: 427px;
+      height: 302px;
+      // slides inplace
+      //left: 793px; // slides to right
+      opacity:0;
+
+    }
+
+  }
+
+}

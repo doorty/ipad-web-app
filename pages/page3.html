@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Natrelle</title>
+		<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+    <meta name="format-detection" content="telephone=no"/>
+		<link rel="stylesheet" href="../css/styles.css"/>
+		<script type="text/javascript" src="../js/zepto.js"></script>
+    <script type="text/javascript" src="../js/utils.js"></script>
+    <script type="text/javascript" src="../js/rotation.js"></script>
+    <base href="../" >
+	</head>
+	<body>
+		<article id="slide-3" class="page">
+		  <div id="pg3-meth" class="methodology">
+			  <div id="pg3-meth-desc" class="description hidden">
+          <p>A study to visually capture the<br>
+          amount of ex vivo upper pole<br>
+          collapse at 10 minutes conducted with 3 shaped implants: <i>Natrelle</i><sup>&reg;</sup> 410, <i>Mentor<sup>&reg;</sup> MemoryShape<sup>&trade;</sup></i>, and <i>Sientra</i><sup>&reg;</sup> Shaped. After being held at the same temperature for several hours, the 3 implants were removed from their packaging and placed on one level metal surface. After 10 minutes, the 3 implants were photographed.</p>
+        </div>
+        <button id="pg3-meth-btn">*Methodology</button>
+      </div>
+			<h1>Take a look side by side*</h1>
+
+      <section class="rotating-breast-container ">
+        <img id="natrelle410" src="images/image-sequences/triple-turn/TripleTurn_0001.png" />
+        <span class="natrelle"><b>Allergan</b></span>
+        <span class="natrelle discription"><i>Natrelle</i><sup>&reg;</sup> 410 FF-410375<br>Width: 12.5 cm, Height: 13.0 cm<br>Volume: 375 cc, Projection: 5.1 cm</span>
+        <!--<span class="mentor"><b>Mentor</b><br /></span>-->
+        <span class="mentor"><b>Mentor</b></span>
+        <span class="mentor discription"><i>Mentor<sup>&reg;</sup> MemoryShape</i><sup>&trade;</sup> 334-1209<br>Width: 12.0 cm, Height: 12.5 cm<br>Volume: 350 cc, Projection: 5.1 cm</span>
+        <!--<span class="sientra"><b>Sientra<sup>&reg;</sup></b></span>-->
+        <span class="sientra"><b>Sientra</b></span>
+        <span class="sientra discription"><i>Sientra</i><sup>&reg;</sup> Shaped 20676-400E<br>Width: 12.5 cm, Height: 13.5 cm<br>Volume: 400 cc, Projection: 4.8 cm</span>
+        <div id="rotating-touch-area"></div>
+      </section>
+
+        <p class="in-vivo">In vivo significance has not been established.</p>
+
+        <script>
+        
+          var rotatingBreastPg2; // global variable
+        
+        	window.slideUnloaded3 = function() {
+        	
+        	 var methDesc = $("#pg3-meth-desc");
+            
+        	 methDesc.addClass("hidden");
+            
+            rotatingBreastPg2.resetRotation();
+        	};
+        
+          // execute callback when the page is ready:
+          window.slideLoaded3 = function() {
+          
+          var methBtn = $("#pg3-meth-btn"),
+            methDesc = $("#pg3-meth-desc");
+            
+          // methdology button
+          methBtn.on(natrelle.utils.isTouch() ? "tap" : "click", function(e) {
+            methDesc.toggleClass("hidden"); // change button image
+          });
+    
+          rotatingBreastPg2 = eveo.rotater({
+              target: ["natrelle410"],
+              touchArea: "rotating-touch-area",
+              numberOfFrames: 15,
+              filePath: ["images/image-sequences/triple-turn/"],
+              fileName: ["TripleTurn_00"],
+              fileExt: ["png"],
+              cacheSize: 10,
+              startingFrame: 1,
+              infiniteRotation: false,
+              onRotate: function() { console.log("on rotate callback"); }
+            });
+
+          };
+
+    </script>
+		</article>
+	</body>
+</html>

@@ -1,0 +1,151 @@
+&#slide-9 { 
+  position: relative;
+
+  h3{
+    text-align: center;  
+    margin: 15px auto 0 auto;
+    font-size: 23px;
+    color:$primaryColor;
+    width:771px;
+  }
+  
+  .footnote.asterik {
+    position: relative;
+    text-align: left;
+    padding-left:3px;
+    margin-left:65px;
+    margin-top: -34px;
+    font-size: 13px;
+    &::before {
+      content:'*';
+      position: absolute;
+      left:-3px;
+    }
+  }
+
+  .content-block {
+    //outline: red solid 1px;
+    $zoomPopupTop:316px;
+    $zoomPopupLeft:654px;
+    text-align: center;
+    margin-top: 16px;
+    margin-left: 64px;
+    width: 900px;
+    height:425px;
+    background:-webkit-linear-gradient(#0db2ce 0%, rgba(255,255,255,0) 100%);
+    -webkit-border-radius: 20px 0 0 0;
+    .part-1 {
+	    opacity:1;
+	    -webkit-transition: opacity .5s ease-in .75s;
+    }
+    .part-2 {
+      opacity:0;
+      -webkit-transition: opacity .25s ease-in .25s;
+    }
+    &.toggle {
+      .part-2 {
+        opacity:1;
+        -webkit-transition: opacity .5s ease-in .5s;
+      }
+      .part-1 {
+        opacity:0;
+        -webkit-transition: opacity .25s ease-in .25s;
+      }
+    }
+    #pg10-pinch-animation {
+      margin-top:20px;
+      margin-left:5px;
+    }
+    .subheading {
+      display:inline-block;
+      margin-top:-25px;
+      text-align: center;
+      h3, h4 {
+       margin-top: 0;
+       margin-bottom:7px;
+       width:300px;
+       color:$secondaryColor;
+      }
+      h3 {
+        font-size: 21px;
+      }
+      h4 {
+        font-size:15px;
+        font-family: $hevBold;
+      }
+      span {
+        font-family: $hevRoman;
+      }
+      &#pg-10-subheading-1 {
+        margin-left:25px;
+      }
+      &#pg-10-subheading-2 {
+        margin-left:200px;
+      }
+    }
+    #pg10-zoom-btn {
+      position: absolute;
+      top: $zoomPopupTop;
+      left: $zoomPopupLeft;
+      width:50px;
+      height:50px;
+      background: url('../images/framework/plus_btn.png') top left no-repeat;
+    }
+    #pg10-zoom-popup {
+      position: absolute;
+      top: $zoomPopupTop - 50px;
+      left:-9999px;
+      opacity:0;
+      &.toggle {
+      	left: $zoomPopupLeft - 50px;
+        opacity:1;
+        -webkit-transition: opacity .25s ease-in .25;
+      }
+    }
+    #pg10-toggle-text {
+      z-index: 9;
+      position:absolute;
+      top: 509px;
+      left: 195px;
+      width:580px;
+      height:250px;
+      text-align: center;
+      font: {
+        size:21px;
+        family:$hevBold;
+      }
+      i {
+        font-family: $hevBoldIt;
+      }
+      #toggle-text-btn {
+        position: absolute;
+        top: -15px;
+        right: -30px;
+        width:50px;
+        height:50px;
+        background: url('../images/framework/implant_btn.png') top left no-repeat;
+      }
+      .one {
+	      opacity:1;
+        -webkit-transition: opacity .5s ease-in .25;
+      }
+      .two {
+        display:none;
+        opacity:0;
+        -webkit-transition: opacity .25s ease-in;
+      }
+      &.toggle {
+        .one {
+          display: none;
+          opacity:0;
+          -webkit-transition: opacity .25s ease-in;
+        }
+        .two {
+          display:block;
+          opacity:1;
+          -webkit-transition: opacity .5s ease-in .25;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,101 @@
+&#slide-5 {
+  position: relative;
+  // remove any weird effects
+  // this only works on non-interactive/animated pages
+  -webkit-transform: translate3d(0,0,0); 
+  
+  .methodology {
+    top: 224px;
+    left: 197px;
+    z-index:20;
+    #pg5-meth-desc {
+       width: 215px;
+    }
+    #pg5-meth-btn {
+     
+    }
+  }
+  
+  h3{
+    text-align: center;
+    //margin-top: 53px;
+    font-size: 24px;
+
+  }
+  ul{
+    font-size: 16px;
+    line-height: 20px;
+    li{
+      margin-bottom: 5px;
+      background: none;
+      i{
+        font-style: italic;
+      }
+    }
+  }
+  .content-block {
+
+    &.left-side {
+      // placeMe     (top,left,width )
+      @include placeMe(81px, 79px, 383px);
+
+      img{
+        margin-left: 14px;
+        margin-bottom: 23px;
+        margin-top: -40px;
+        margin-right: 10px;
+        float: left;
+      }
+      .blue-bar{
+        background-color:#003768;
+        border-radius: 0 30px 0 30px;
+        width: 880px;
+        height: 108px;
+        margin-top: 75px;
+        posistion: relative;
+        h1{
+          //padding-left: 600px;
+          color: #FFF;
+          font-family: "Helvetica Neue Bold";
+          font-size: 22px;
+          text-align: left;
+          padding-top: 25px;
+
+        }
+      }
+
+    }
+    &.right-side {
+      h3{
+        margin-top: 27px;
+        margin-bottom: 22px;
+      }
+
+      // placeMe     (top,left,width )
+      @include placeMe(81px, 547px, 405px);
+      img{
+        margin-left: 14px;
+        margin-top: 8px;
+        width: 168px;
+        float: left;
+      }
+      .blue-button{
+        background-color: #00aecb;
+        color: #FFF;
+        font-size: 14px;
+        width: 120px;
+        height: 35px;
+        border-radius: 20px 0 20px 0;
+        margin-left: 200px;
+        margin-top: 20px;
+        padding: 12px 10px 0 10px;
+        font-family: "Helvetica Neue Bold";
+
+      }
+
+    }
+  }
+
+
+
+}

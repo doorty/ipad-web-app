@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Natrelle</title>
+		<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <link rel="stylesheet" href="../css/styles.css"/>
+    <script type="text/javascript" src="../js/zepto.js"></script>
+    <script type="text/javascript" src="../js/utils.js"></script>
+    <base href="../" >
+	</head>
+	<body>
+		<article id="slide-11" class="page">
+			<h1>Designed for ease and greater precision. </h1>
+			<h2><i>Natrelle</i><sup>&reg;</sup> 133 Tissue Expander with optional suture tabs.</h2>
+			<figure id="fig-pg12" class="biocell">
+				<button id="fig-pg12-btn1" name="biocell-texture"></button>
+				<button id="fig-pg12-btn2" name="anatomically-shaped"></button>
+        <button id="fig-pg12-btn3" name="conveniently-place"></button>
+				<div id="biocell-texture">
+          <h3>BIOCELL<sup>&reg;</sup> texturing</h3>
+					<p>
+						Unique texturing for mild tissue adherence and softness within a compliant, vascular capsule.<sup>5,10,</sup>*
+					</p>
+					<br>
+					<p style="font-size:smaller;">
+					<span style="display:inline-block;margin-left:-8px;">*</span> Not studied in Allergan clinical studies.
+					</p>
+				</div>
+				<div id="conveniently-place">
+					 <h3>Conveniently placed suture tabs</h3>
+					<p>
+						Optimal tab locations (4, 8, and 12 o’clock positions) for easy intraoperative access and additional stability.
+					</p>
+				</div>
+				<div id="anatomically-shaped">
+					<h3>Anatomically shaped <br>to match the<br><i>Natrelle</i><sup>&reg;</sup> 410 gel implant</h3>
+					<p>The anatomical footprint of the <i>Natrelle</i><sup>&reg;</sup> 133 Tissue Expander matches the anatomically shaped<br><i>Natrelle</i><sup>&reg;</sup> 410 implant.</p>
+				</div>
+			</figure>
+			<section class="content-block">
+				<figure class="magna"></figure>
+				<ul>
+					<li>Completely textured port (moderate- and full-height expanders)</li>
+					<li>Flexible MAGNA-SITE<sup>&reg;</sup> injection site with titanium needle guard </li>
+					<li>Allows for a smaller incision for equivalent port size </li>
+				</ul>
+				<figure class="magna-finder"></figure>
+				<ul>
+					<li>No need for raised palpation ring</li>
+					<li>Smooth 360º rotation provides greater precision with a full range of motion</li>
+					<li>Four Point Marking System for simple, fast, and precise needle placement </li>
+				</ul>
+			</section>
+			<button id="pg10-tissue-expander-btn" class="tissue-expander" onclick="natrelle.framework.showTissueExpanderIsi();">Tap here for Important <i>Natrelle</i><sup>&reg;</sup> Tissue Expander Safety Information</button>
+
+			<script>
+			
+  			window.slideUnloaded11 = function() {
+  			 var btn1 = $("#fig-pg12-btn1"),
+  			     btn2 = $("#fig-pg12-btn2"),
+  			     btn3 = $("#fig-pg12-btn3");
+  			    
+  			 btn1.removeClass("current");
+  			 btn2.removeClass("current");
+  			 btn3.removeClass("current");
+  			 
+  			 // hide popups
+  			 $('#'+btn1.attr('name')).removeClass("on");
+  			 $('#'+btn2.attr('name')).removeClass("on");
+  			 $('#'+btn3.attr('name')).removeClass("on");
+			}
+			
+			window.slideLoaded11 = function() {
+			
+  			var btn1 = $("#fig-pg12-btn1"),
+  			    btn2 = $("#fig-pg12-btn2"),
+  			    btn3 = $("#fig-pg12-btn3");
+  			
+
+  			btn1.on(natrelle.utils.isTouch() ? "tap" : "click", function(e) {
+  			 btn1.toggleClass("current");
+  			 btn2.removeClass("current");
+  			 btn3.removeClass("current");
+  			 $("figure#fig-pg12 > div").not('#'+this.name).removeClass("on");
+  			 $('#'+this.name).toggleClass("on"); // show popup
+  			});
+  			
+  			btn2.on(natrelle.utils.isTouch() ? "tap" : "click", function(e) {
+  			 btn2.toggleClass("current");
+  			 btn1.removeClass("current");
+  			 btn3.removeClass("current");
+  			 $("figure#fig-pg12 > div").not('#'+this.name).removeClass("on");
+  			 $('#'+this.name).toggleClass("on"); // show popup
+  			});
+  			
+  			btn3.on(natrelle.utils.isTouch() ? "tap" : "click", function(e) {
+  			 btn3.toggleClass("current");
+  			 btn1.removeClass("current");
+  			 btn2.removeClass("current");
+  			 $("figure#fig-pg12 > div").not('#'+this.name).removeClass("on");
+  			 $('#'+this.name).toggleClass("on"); // show popup
+  			});
+
+      };
+    </script>
+
+		</article>
+    
+	</body>
+</html>

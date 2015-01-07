@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Natrelle</title>
+	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+	<meta name="format-detection" content="telephone=no"/>
+	<link rel="stylesheet" href="../css/styles.css"/>
+	<script type="text/javascript" src="../js/zepto.js"></script>
+	<script type="text/javascript" src="../js/utils.js"></script>
+	<script type="text/javascript" src="../js/slider.js"></script>
+	<base href="../">
+</head>
+<body>
+<article id="slide-8" class="page">
+	<h1>Designed to maintain a true anatomical shape.<sup>1</sup></h1>
+
+	<h2 class="title">The <i>Natrelle</i><sup>&reg;</sup> 410 is designed for long-lasting stability, to help prevent upper pole deformities.</h2>
+	
+	<section class="top">
+	  <p><b>Low wrinkling/rippling – 3.1%</b> in primary reconstruction through 7 years.<sup>1</sup></p>
+	  <p><b>Maintains upper pole fill – 4.2%</b> upper pole fullness at 7 years.<sup>1</sup></p>
+	</section>
+ 
+ <section class="rotating-breast-container " id="compare-pg08">
+			  <h3 id="pg08-title-text-1" class="top">The <i>Natrelle</i><sup>&reg;</sup> 410 is designed to start out with an<br>
+			  anatomically shaped profile&mdash;and stay that way.<sup>1,2</sup></h3>
+			  <h3 id="pg08-title-text-2" class="top hidden">Take a look side by side.</h3>
+ 
+  	<div class="animation">	
+    	
+    	<figure id="pg08-mentor-implant" class="mentor_implant"></figure>
+    
+  		<figure id="fig-pg08">
+  			<button class="compare" id="compareBtn-pg08">COMPARE</button>
+  			
+  			<label for="zipper1-pg08">Proportionate<br>upper pole fill </label>
+  		  
+  		  <div id="zipper1-pg08" class="verticalSlider" data-min="0" data-max="100"  style="top:96px !important;">
+          <div class="sliderTrackLeft"></div>
+          <div class="sliderTrack" style="height: 156px; "></div>
+          <div class="sliderTrackRight"></div>
+          <div class="sliderThumb"></div>
+          <div class="sliderTicks" style="height: 156px; "></div>
+        </div>
+  		  
+  		  <label for="zipper2-pg08">Anatomically shaped<br>lower pole curve </label>
+  			
+  			<div id="zipper2-pg08" class="verticalSlider" data-min="0" data-max="100" style="top:-12px !important;">
+          <div class="sliderTrackLeft"></div>
+          <div class="sliderTrack" style="height: 156px; "></div>
+          <div class="sliderTrackRight"></div>
+          <div class="sliderThumb"></div>
+          <div class="sliderTicks" style="height: 156px; "></div>
+        </div>
+  			
+  			<img id="pg08-natrelle-implant" class="natrelle_implant" src="images/pages/pg05/Natrelle410_implant_02.png" class="" width="621px"/>
+  
+  			<h3 class="big bottom">The <i>Natrelle</i><sup>&reg;</sup> 410 is contoured with a lower pole curve and upper pole fill similar to that of a natural breast.<sup>3</sup></h3>
+  
+  			<div class="shrunk-text">
+  				<h2 class="glow"><span><i>Natrelle</i><sup>&reg;</sup> 410</span><br>Style MM 320</h2>
+  				<h2><i>Mentor<sup>&reg;</sup> MemoryShape</i><sup>&trade;</sup><br>
+  					354-1208</h2>
+  				<div class="controls">
+  				  <button class="back-btn" id="backBtn-pg08"><h3>BACK</h3></button>
+  				  <button class="flip-btn" id="flipBtn-pg08"><h3>FLIP</h3></button>
+  				</div>
+  				<img id="outside-curves" class="delay" src="images/pages/pg05/outside_curves.png"/>
+  				<img id="inside-curves" src="images/pages/pg05/inside_curves.png"/>
+  			</div>
+  		</figure>
+  		
+    </div>	
+  </section>
+ 
+	<script>
+	
+	window.slideUnloaded8 = function() {
+	 var  ranges = $("figure#fig-pg08 > .verticalSlider"),
+        natrelleImplant = $("#pg08-natrelle-implant"),
+        mentorImplant = $("#pg08-mentor-implant"),
+        title1 = $("#pg08-title-text-1"),
+        title2 = $("#pg08-title-text-2"),
+        zipper1 = $('#zipper1-pg08'),
+        zipper2 = $('#zipper2-pg08'),
+        slider1 = "zipper1-pg08",
+        slider2 = "zipper2-pg08";
+        
+    clickToPosition(slider1,100.0);
+		clickToPosition(slider2,100.0);
+		title2.addClass("hidden");
+    title1.removeClass("hidden");
+		zipper1.removeClass("on");
+		zipper2.removeClass("on");
+		natrelleImplant.attr("src", "images/pages/pg05/Natrelle410_implant_02.png");
+		
+		// remove slide labels
+    $('label[for="' + slider1 + '"]').removeClass('on');
+    $('label[for="' + slider2 + '"]').removeClass('on');
+		
+		$("#compareBtn-pg08").removeClass("on");
+		$("#compare-pg08").removeClass("shrunk");
+        
+    function clickToPosition(sliderId, newValue) {
+      var mySlider = document.getElementById(sliderId);
+      mySlider._doubleValue = newValue;
+      if (mySlider.positionThumbBasedOnValue != undefined) {
+        mySlider.positionThumbBasedOnValue();
+      }
+      else {
+        mySlider.style.top = newValue + "px";
+      }
+    }
+	};
+	
+	 window.slideLoaded8 = function() {
+	 
+      var ranges = $("figure#fig-pg08 > .verticalSlider"),
+            natrelleImplant = $("#pg08-natrelle-implant"),
+            mentorImplant = $("#pg08-mentor-implant"),
+            title1 = $("#pg08-title-text-1"),
+            title2 = $("#pg08-title-text-2"),
+            zipper1 = $('#zipper1-pg08'),
+            zipper2 = $('#zipper2-pg08'),
+            slider1 = "zipper1-pg08",
+            slider2 = "zipper2-pg08";
+        
+        ranges.on("touchstart", function(e) {
+      	   GlobalDoNotMovePage = true;
+    	   });
+    	   
+    	   ranges.on("touchend", function(e) {
+      	   GlobalDoNotMovePage = false;
+    	   });
+    	   
+    	   // slider depends on dom reflow, so it needs a little more time
+          setTimeout(function checkSlider() {
+          	if (zipper1.find(".sliderTrack").height() > 0 && zipper2.find(".sliderTrack").height() > 0) {
+          		//natrelle.utils.log("height = " + cutter.find(".sliderTrack").height());
+	          	Apple.slider.create(slider1, {initialValue:100, height:173, minValue:0, maxValue:100, onSlide: onSlide1});
+	          	Apple.slider.create(slider2, {initialValue:100, height:289, minValue:0, maxValue:100, onSlide: onSlide2});
+          	}
+          	else {
+	          	setTimeout(checkSlider, 100);
+          	}
+          }, 100);          
+          
+        function onSlide1(value) {
+          natrelle.utils.log("onSlide1 = " + value);
+          if (value == 0) {
+  					zipper1.addClass('on');
+  					$('label[for="' + zipper1.attr('id') + '"]').addClass('on');
+  					//if both are on turn on compare
+  					if (zipper1.hasClass('on') && zipper2.hasClass('on')){
+  						$('#compareBtn-pg08').addClass('on');
+  					}
+  				} else {
+  					$('figure#fig-pg05 > label').removeClass("delayed");  //turn off delayed labels
+  					$('label[for="' + zipper1.attr('id') + '"]').removeClass('on');   //turns off the label for this id
+  					$('#compareBtn-pg08').removeClass('on');    // turn off compare
+
+  					zipper1.removeClass('on');
+
+  				}
+        }
+        
+        function onSlide2(value) {
+          natrelle.utils.log("onSlide2 = " + value);
+          if (value == 0) {
+  					zipper2.addClass('on');
+  					$('label[for="' + zipper2.attr('id') + '"]').addClass('on');
+  					//if both are on turn on compare
+  					if (zipper1.hasClass('on') && zipper2.hasClass('on')){
+  						$('#compareBtn-pg08').addClass('on');
+  					}
+  				} else {
+  					$('figure#fig-pg08 > label').removeClass("delayed");  //turn off delayed labels
+  					$('label[for="' + zipper2.attr('id') + '"]').removeClass('on');   //turns off the label for this id
+  					$('#compareBtn-pg08').removeClass('on');    // turn off compare
+
+  					zipper2.removeClass('on');
+
+  				}
+        }
+
+        function clickToPosition(sliderId, newValue) {
+          var mySlider = document.getElementById(sliderId);
+          mySlider._doubleValue = newValue;
+          mySlider.positionThumbBasedOnValue();
+        }
+			
+			
+			//compare button-->
+			$("#compareBtn-pg08").on(natrelle.utils.isTouch() ? "tap" : "click", function (e) {
+			  natrelleImplant.attr("src", "images/pages/pg05/natrelle_implant.png");
+				$(this).toggleClass("on"); //  turns it on
+				$("#compare-pg08").toggleClass("shrunk"); // toggles animation
+				$('figure#fig-pg08 > label').removeClass("on");  //turn off all labels
+				$('figure#fig-pg08 > label').removeClass("delayed");  //turn off all delayed labels
+				$(this).toggleClass('delayed');
+				title2.removeClass("hidden");
+				title1.addClass("hidden");
+			});
+			//back button-->
+			$("#backBtn-pg08").on(natrelle.utils.isTouch() ? "tap" : "click", function (e) {
+				$("#compare-pg08").toggleClass("shrunk"); // change button image
+				//$('figure#fig-pg08 > label').addClass("delayed");  //turn on labels
+				//$('figure#fig-pg08 > label').addClass("on");  //turn on labels
+				//$('#compareBtn-pg08').addClass('delayed');
+				clickToPosition(slider1,100.0);
+				clickToPosition(slider2,100.0);
+				zipper1.removeClass("on");
+				zipper2.removeClass("on");
+				natrelleImplant.attr("src", "images/pages/pg05/Natrelle410_implant_02.png");
+				title2.addClass("hidden");
+				title1.removeClass("hidden");
+			});
+			
+			$("#flipBtn-pg08").on(natrelle.utils.isTouch() ? "tap" : "click", function (e) {
+			  $("#compare-pg08").toggleClass("switch");
+			});
+
+    };
+</script>
+</article>
+</body>
+</html>

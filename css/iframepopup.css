@@ -1,0 +1,5 @@
+#iframe-popup { position: absolute; top: 50px; left: 60px; border: 15px solid #afafaf; -webkit-border-radius: 15px 0px 15px 0px; background-color: #666; width: 900px; height: 598px; z-index: 1002; }
+#iframe-popup::after { content: ''; display: block; position: absolute; top: -38px; left: 858px; width: 48px; height: 49px; background: url("../images/framework/minus_btn.png") right top no-repeat; pointer-events: none; }
+#iframe-popup div { overflow: hidden; width: 870px; height: 568px; -webkit-border-radius: 15px 0px 15px 0px; }
+#iframe-popup div div { overflow: scroll; -webkit-overflow-scrolling: touch; width: inherit; height: inherit; }
+#iframe-popup div div iframe { width: 100%; height: 100%; }
